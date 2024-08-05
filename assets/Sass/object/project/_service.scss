@@ -1,0 +1,68 @@
+@use "../../foundation/variable" as v;
+@use "../../foundation/mixin" as m;
+
+.p-service {
+
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+
+  @include m.mq(sp) {
+    display: block;
+  }
+
+  &__item {
+    display: flex;
+    // justify-content: center;
+    flex-flow: column;
+    width: 18%;
+    padding: 10px;
+
+
+
+    @include m.mq(sp) {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+
+    h2 {
+      font-size: 24px;
+      text-align: center;
+    }
+
+    p {
+
+      margin-top: 20px;
+
+      @include m.mq(sp) {
+        padding: 0 50px;
+
+      }
+    }
+  }
+
+
+}
+
+.p-service__img {
+background-image: url(../img/img3.jpg);
+  background-size: cover;
+  width: 100%;
+  max-width: 290px;
+  height: 290px;
+  margin: 22px auto 0;
+  border-radius: 999px;
+  display: block;
+
+}
+
+.p-service__img.service_img2 {
+  background-image: url(../img/img4.jpg);
+
+}
+
+.p-service__img.service_img3 {
+  background-image: url(../img/img5.jpg);
+
+}

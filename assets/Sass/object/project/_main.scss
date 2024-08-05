@@ -1,0 +1,59 @@
+@use "../../foundation/variable" as v;
+@use "../../foundation/mixin" as m;
+
+
+.p-main{
+  width: 100%;
+  padding: 0 120px 50px;
+  margin-top: -80px;
+
+  @include m.mq(sp){
+     padding: 0;
+  }
+
+&__bg{
+  background-image: url(../img/img3.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+  max-width: 1290px;
+  width: 80%;
+  height: 570px;
+  display: block;
+  margin: 0 auto;
+
+  @include m.mq(sp){
+     height: 100vh;
+     margin: 0;
+     width: 100%;
+
+  }
+}
+
+&__content{
+
+  margin-top: 68px;
+  h2{
+    text-align: center;
+    font-size: 24px;
+    margin: 0 auto;
+
+  }
+
+  p{
+    font-size: 16px;
+      margin: 20px auto 0;
+      width: 68%;
+
+    @include m.mq(sp){
+      font-size: 3.2vw;
+        margin: 20px auto 0;
+        width: 68%;
+        padding: 0px 18px 60px;
+        
+    }
+
+  }
+}
+
+
+}

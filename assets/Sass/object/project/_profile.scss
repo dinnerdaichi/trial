@@ -1,0 +1,107 @@
+@use "../../foundation/variable" as v;
+@use "../../foundation/mixin" as m;
+
+.p-profile {
+
+  padding: 50px 0;
+
+  h2 {
+    text-align: center;
+    @include m.mq(sp){
+       display: none;
+    }
+  }
+
+  &__item {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include m.mq(sp) {
+      flex-flow: column;
+    }
+  }
+
+  &__contents {
+    width: 30%;
+    margin-top: 40px;
+
+    @include m.mq(sp) {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-right: 50px;
+    align-items: center;
+    margin-top: 30px;
+
+
+
+  }
+
+  &__map {
+    width: 25%;
+    @include m.mq(sp){
+       width: 90%;
+    }
+
+    iframe{
+      display: block;
+      width: 100%;
+      height: 300px;
+      margin: 0 auto;
+    }
+
+
+    @include m.mq(sp) {
+      margin-top: 50px;
+    }
+  }
+}
+
+
+
+table {
+  @include m.mq(sp) {
+    width: 100%;
+
+  }
+}
+
+th {
+  text-align: right;
+  margin-right: 40px;
+  padding: 6px 40px 0 0;
+  width: 50%;
+  font-size: 14px;
+
+  @include m.mq(sp) {
+    padding: 10px 40px 0 0;
+    width: 40%;
+
+  }
+}
+
+tr {
+  padding-top: 20px;
+
+  @include m.mq(sp) {
+    padding-top: 10px;
+  }
+}
+
+td {
+  padding-top: 20px;
+
+  @include m.mq(sp) {
+    padding-top: 10px;
+
+  }
+}
+

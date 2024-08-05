@@ -1,0 +1,55 @@
+@use "../../foundation/variable" as v;
+@use "../../foundation/mixin" as m;
+
+.p-story {
+  // backdrop-filter: blur(12px);
+  background-image: url(../img/img6.jpg);
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  margin-top: 90px;
+  position: relative;
+
+  @include m.mq(sp){
+     flex-flow: column;
+     margin-top: 20px;
+  }
+
+
+  &__item {
+
+    width: 50%;
+    max-width: 400px;
+    margin-right: 50px;
+    color: white;
+    padding: 84px 0 60px;
+
+    @include m.mq(sp){
+      width: 100%;
+      max-width: 100%;
+      padding: 70px 20px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+
+    h2 {
+      text-align: center;
+      font-size: 24px;
+    }
+
+    p {
+      margin-top: 50px;
+
+      @include m.mq(sp){
+         margin-top: 30px;
+      }
+    }
+
+  }
+
+}
